@@ -1,0 +1,24 @@
+Number 1 value: 10
+Number 2 value: 20
+Number 1 address: 0x61ff0c
+Number 2 address: 0x61ff08
+
+
+ptr 1 value: 10
+ptr 2 value: 20
+ptr 1 address: 0x61ff04
+ptr 2 address: 0x61ff00
+
+
+
+
+a  value: 100
+b  value: 0
+a  address: 0x61ff04
+b address: 0x61fef4
+
+
+ptr 1 value: 100
+ptr 2 value: 20
+ptr 1(a) address: 0x61ff04
+ptr 2(b) address: 0x61ff00
