@@ -6,7 +6,6 @@ class Node
 public:
     int val;
     Node *next;
-
     Node(int val)
     {
         this->val = val;
@@ -14,61 +13,62 @@ public:
     }
 };
 
-void insert_tail(Node *&head, int v)
+
+void insert_at_tail(Node *&head, int v)
 {
-    Node *newNode = new Node(v);  // create node
-    
+    Node *newNode = new Node(v); // create node object
     if (head == NULL)
-    { // if head is null, then tail and head both are same
-        head = newNode;
+    {// if head is NULL
+        head = newNode; // update head
         return;
     }
 
-    Node *temp = head;
-
-    while (temp->next != NULL)
+    Node *tmp = head; // assign head in tmp
+    while (tmp->next != NULL)
     {
-        temp = temp->next;
+        tmp = tmp->next; //traver and assing next node address
     }
-    temp->next = newNode; // newnode in temp
+    tmp->next = newNode; //assign temp in newNode
 }
 
-void print_linked_list(Node *head)
+void print_list(Node *head)
 {
-
-    Node *temp = head;
-    while (temp != NULL)
+    Node *tmp = head; // assign head in tmp
+    while (tmp != NULL)
     {
-        cout << temp->val << " ";
-        temp = temp->next;
+        cout << tmp->val << " "; 
+        tmp = tmp->next;//traver and assing next node address
     }
     cout << endl;
 }
 
-int main()
+main()
 {
-    cout << "Option-1: Insert at tail:" << endl;
-    cout << "Option-2: Prin Liked List:" << endl;
-    cout << "Option-3: Terminate:" << endl;
+
+    cout << "option-1: Insert node= " << endl;
+    cout << "option-2: Print linkied list= " << endl;
+    cout << "option-3: Terminate " << endl;
     Node *head = NULL;
     while (true)
     {
         int op;
         cin >> op;
+
         if (op == 1)
         {
-            cout << "Enter your value: ";
+            cout << "Enter value: ";
             int v;
             cin >> v;
-            insert_tail(head, v);
+            insert_at_tail(head, v);
         }
-        else if (op == 2)
+        if (op == 2)
         {
-            cout << "Your linked list: ";
-            print_linked_list(head);
+            cout << "Your liked list: ";
+            print_list(head);
         }
-        else if (op == 3)
+        if (op == 3)
         {
+            cout << "Terminated";
             break;
         }
     }
