@@ -5,24 +5,20 @@ class Node
 {
 public:
     int val;
-    Node *next; // pointer of Node
+    Node *next; //create a  pointer of Node
 };
 
 int main()
 {
+    Node a,b; // create node
+    a.val = 100,b.val = 200;
 
-    Node a, b; // create node
+    a.next = &b,b.next = NULL;
 
-    a.val = 100; // assign value
-    b.val = 200;
+    cout << a.val <<" "<< b.val << endl;
 
-    a.next = &b; // assign next group address
-    b.next = NULL;
-
-    cout << a.val << " " << b.val << endl;
-
-    // cout<<(*a.next).val<<endl;
-    cout << a.next->val << endl;
+    // cout<<(*a.next).val<<endl; 
+    cout << a.next->val <<" "<< b.next->val << endl;
 
     return 0;
 }

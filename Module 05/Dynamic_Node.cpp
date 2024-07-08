@@ -12,6 +12,8 @@ public:
     }
 };
 
+
+
 int main()
 {
     Node *head = new Node(10); // pointer
@@ -20,6 +22,7 @@ int main()
 
     head->next = a;
     a->next = b;
+    
 
     cout << head->val << " " << a->val << " " << b->val << endl;
 
