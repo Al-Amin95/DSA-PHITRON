@@ -13,22 +13,18 @@ public:
 };
 
 
-
 int main()
 {
-    Node *head = new Node(10); // pointer
+    Node *head = new Node(10);
     Node *a = new Node(20);
     Node *b = new Node(30);
+    Node *c = new Node(30);
 
-    head->next = a;
-    a->next = b;
-    
-
-    cout << head->val << " " << a->val << " " << b->val << endl;
-
-
-    cout << head->next->val << endl;
-    cout << a->next->val << endl;
+    head->next=a;
+    a->next=b;
+    b->next=c;
+  
+    cout<<"Linked List: "<<head->val<<" "<<a->val<<" "<<b->val<<" "<<c->val<<endl;
 
     return 0;
 }

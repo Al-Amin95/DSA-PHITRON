@@ -1,24 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Node
-{
-public:
+class Node {
+    public:
     int val;
-    Node *next; //create a  pointer of Node
+    Node *next;
 };
 
-int main()
-{
-    Node a,b; // create node
-    a.val = 100,b.val = 200;
+int main() {
 
-    a.next = &b,b.next = NULL;
+    Node a,b,c,d;
 
-    cout << a.val <<" "<< b.val << endl;
+    a.val=10;
+    b.val=20;
+    c.val=30;
+    d.val=40;
 
-    // cout<<(*a.next).val<<endl; 
-    cout << a.next->val <<" "<< b.next->val << endl;
+
+    a.next=&b;
+    b.next=&c;
+    c.next=&d;
+
+    cout<<"Linked list: "<<a.val<<" "<<b.val<<" "<<c.val<<" "<<d.val<<endl;
+    cout<<"Linked List: "<<a.next->val<<endl;
+    cout<<"Linked List: "<<a.next->next->val<<endl;
+    cout<<"Linked List: "<<a.next->next->next->val<<endl;
+  
 
     return 0;
 }

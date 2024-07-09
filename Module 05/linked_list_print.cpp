@@ -38,26 +38,12 @@ int main() {
     //     head=head->next;
     // }
 
-    // while (head !=NULL)
-    // {
-    //     cout<<head->val<<" ";
-    //     head=head->next;
-    // }
-
     Node *temp=head;
     while (temp !=NULL)
     {
         cout<<temp->val<<" ";
         temp=temp->next;
     }cout<<endl;
-
-
-    // temp=head;
-    // while (temp !=NULL)
-    // {
-    //     cout<<temp->val<<" ";
-    //     temp=temp->next;
-    // }
-
+    
     return 0;
 }
